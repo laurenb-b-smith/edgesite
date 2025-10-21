@@ -1,41 +1,43 @@
+/* Basic styling for a blockquote */
 .quote blockquote {
-    margin: 0 auto;
-    padding: 0 24px;
-    max-width: 900px;
-  }
-  
-  @media (width >= 900px) {
-    .quote blockquote {
-      padding: 0 32px;
-    }
-  }
-  
-  .quote blockquote .quote-quotation {
-    font-size: 120%;
-  }
-  
-  .quote blockquote .quote-quotation > :first-child {
-    text-indent: -0.5ch;
-  }
-  
-  .quote blockquote .quote-quotation > :first-child::before,
-  .quote blockquote .quote-quotation > :last-child::after {
-    line-height: 0;
-  }
-  
-  .quote blockquote .quote-quotation > :first-child::before {
-    content: "“";
-  }
-  
-  .quote blockquote .quote-quotation > :last-child::after {
-    content: "”";
-  }
-  
-  .quote blockquote .quote-attribution {
-    text-align: right;
-  }
-  
-  .quote blockquote .quote-attribution > :first-child::before {
-    content: "—";
-    padding-right: 0.5ch;
-  }
+    border-left: 5px solid #dd00ff; /* Blue left border */
+    margin: 1.5em 0; /* Vertical margin for separation */
+    padding: 1em 1.5em; /* Padding inside the quote box */
+    font-family: 'Brush Script MT', 'Comic Sans MS', cursive; /* Cursive font */
+    font-size: 3.1em; /* Slightly larger font size */
+    line-height: 1.6; /* Improved readability */
+    color: #333; /* Darker text color */
+    position: relative; /* For positioning pseudo-elements */
+}
+
+/* Styling for the opening quote mark using a pseudo-element */
+.quote blockquote::before {
+    content: "“"; /* Unicode opening double quote */
+    font-size: 4em; /* Large quote mark */
+    color: #ce5420; /* Lighter color for the quote mark */
+    position: absolute;
+    top: 0.1em;
+    left: 0.1em;
+    line-height: 1; /* Adjust line height for positioning */
+}
+
+/* Styling for the closing quote mark using a pseudo-element */
+.quote blockquote::after {
+    content: "”"; /* Unicode closing double quote */
+    font-size: 4em; /* Large quote mark */
+    color: #ce5420; /* Lighter color for the quote mark */
+    position: absolute;
+    bottom: 0.1em;
+    right: 0.1em;
+    line-height: 1; /* Adjust line height for positioning */
+}
+
+/* Styling for the author or source of the quote (optional) */
+.quote blockquote footer {
+    display: block; /* Ensure it's on a new line */
+    text-align: right; /* Align to the right */
+    font-size: 0.4em; /* Smaller font size */
+    color: #666; /* Gray text color */
+    margin-top: 1em; /* Space above the footer */
+    font-style: italic; /* Italicize the source */
+}
