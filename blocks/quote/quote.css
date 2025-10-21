@@ -1,6 +1,6 @@
 /* Basic styling for a blockquote */
 .quote blockquote {
-    border-left: 5px solid #dd00ff; /* Blue left border */
+    border-left: 5px solid #d0f; /* Blue left border */
     margin: 1.5em 0; /* Vertical margin for separation */
     padding: 1em 1.5em; /* Padding inside the quote box */
     font-family: 'Brush Script MT', 'Comic Sans MS', cursive; /* Cursive font */
